@@ -1,0 +1,9 @@
+<% if @restaurant.persisted? %>
+  <h1>New Review</h1>
+<% else %>
+  <h1>New Restaurant</h1>
+<% end %>
+
+<%= render 'form', restaurant: @restaurant, review: @review %>
+
+<%= link_to 'Back', restaurants_path %>

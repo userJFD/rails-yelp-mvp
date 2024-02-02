@@ -1,0 +1,15 @@
+<%= form_with(model: [@restaurant, @review], url: restaurant_reviews_path(@restaurant)) do |form| %>
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.label :rating %>
+    <%= form.number_field :rating, in: 1..5 %>
+  </div>
+
+  <div>
+    <%= form.submit 'Create Review' %>
+  </div>
+<% end %>
